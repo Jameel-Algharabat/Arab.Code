@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amita&family=Architects+Daughter&family=Caveat+Brush&display=swap');
+        .nav{
+            font-family: 'Architects Daughter', cursive;
+            margin-left: 100px;
+        }
+        .nav2{
+            font-family: 'Architects Daughter', cursive;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+
+        body {
+            background-color: whitesmoke;
+        }
+
+
+
+        .h1 {
+            margin-top: 60px;
+            margin-left: 240px;
+            width: 600px;
+            height: 750px;
+        }
+
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 550px auto;
+            gap: 0px;
+            background-color: #afeeee;
+            height: 800px;
+        }
+
+        /* styl image */
+        .img1 {
+            border-radius: 80px;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.322);
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        /* .image {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            ;
+            left: 12px;
+            right: 10;
+            background-color: #87CEEB;
+            overflow: hidden;
+            width: 500px;
+            height: 0;
+            transition: .5s ease;
+            border-radius: 80px;
+        }
+
+        .container:hover .overlay {
+            height: 100%;
+        }
+
+        .text {
+            white-space: nowrap;
+            color: white;
+            font-size: 30px;
+            position: absolute;
+            overflow: hidden;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            font-family: 'Architects Daughter', cursive;
+            text-align: center;
+        }
+
+        /* styl image */
+
+        .texth1 {
+            font-family: 'Architects Daughter', cursive;
+            font-size: larger;
+        }
+
+        .text1 {
+            font-size: medium;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .h2 {
+            margin-top: 90px;
+            margin-left: 220px;
+            width: 600px;
+            height: 500px;
+        }
+
+        .h3 {
+            margin-bottom: 200px;
+            margin-left: 400px;
+
+        }
+
+        .about-me {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto 300px;
+            gap: 15px;
+            background-color: #87CEEB;
+            height: 900x;
+
+
+
+        }
+
+        .item3 {
+            grid-column: 1 / span 2;
+            grid-row: 2;
+            text-align: center;
+            font-size: x-large;
+            font-family: 'Architects Daughter', cursive;
+
+        }
+
+        .adout-me-text {
+            font-size: 30px;
+            font-family: 'Caveat Brush', cursive;
+        }
+
+        .border-me-text {
+            border: 0px solid black;
+            padding: 25px;
+            border-radius: 80px;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.322);
+            width: auto;
+            background-color: #afeeee;
+        }
+
+        .border-me-text:hover {
+            border: 0px solid rgb(37, 37, 37);
+            padding: 25px;
+            border-radius: 60px;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.322);
+            width: auto;
+            background-color: #008080;
+            color: rgb(255, 255, 255);
+        }
+
+        .about-me-h3 {
+            font-size: larger;
+            font-family: 'Architects Daughter', cursive;
+
+        }
+
+        .qualification-grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 5px;
+            background-color: #afeeee;
+            height: 800px;
+        }
+
+        .border-text-qualification {
+            border: 0px solid black;
+            padding: 25px;
+            border-radius: 80px;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.322);
+            width: auto;
+            height: 600px;
+            background-color: #87CEEB;
+        }
+
+        .border-text-qualification:hover {
+            border: 0px solid rgb(37, 37, 37);
+            padding: 25px;
+            border-radius: 60px;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.322);
+            width: auto;
+           height: 600px;
+            background-color: #008080;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .qualification-h3 {
+            font-size: larger;
+            font-family: 'Architects Daughter', cursive;
+
+
+        }
+
+        .qualification-size {
+            margin-top: 90px;
+            margin-left: 30px;
+            width: 450px;
+            height: 750px;
+            text-align: center;
+        }
+
+        .qualification-size-text {
+            font-size: larger;
+            font-family: 'Architects Daughter', cursive;
+            font-size: xx-large;
+        }
+
+        .end-page-grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 5px;
+            background-color: #e0ffff;
+            height: 80px;
+            text-align: center;
+
+        }
+        @media (max-width:1000px){
+            .grid-container {
+            display: grid;
+            grid-template-columns: 550px auto;
+            gap: 0px;
+            background-color: #afeeee;
+            height: 800px;
+        }
+        .h1 {
+            margin-top: 60px;
+            margin-left: 100px;
+            width: 300px;
+            height: 750px;
+        }
+        .about-me {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            gap: 5px;
+            background-color: #87CEEB;
+            height: auto;
+
+
+        }
+        .h2 {
+            margin-top: 90px;
+            margin-left: 100px;
+            width:300px;
+            height:auto;
+        }
+        .qualification-grid {
+            display: grid;
+            grid-template-columns: auto auto ;
+            gap: 5px;
+            background-color: #afeeee;
+            height: auto;
+        }
+    }
+    @media (max-width:844px){
+        .grid-container {
+            display: grid;
+            grid-template-columns: 550px ;
+            gap: 0px;
+            background-color: #afeeee;
+            height: auto;
+            
+        }
+        .h1 {
+            margin-top: 60px;
+            margin-left: 100px;
+            width: 200px;
+            height: 750px;
+        }
+        .about-me {
+            display: grid;
+            grid-template-columns: auto;
+            
+            gap: 5px;
+            background-color: #87CEEB;
+            height: auto;
+
+
+        }
+        .h2 {
+            margin-top: 90px;
+            margin-left: 100px;
+            width:200px;
+            height:auto;
+        }
+        .qualification-grid {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 5px;
+            background-color: #afeeee;
+            height: auto;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="file:///C:/Users/user/Desktop/hello%20world/My%20project/project2.html#"><p class="nav">jameel</p></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="file:///C:/Users/user/Desktop/hello%20world/My%20project/project2.html#"><p class="nav">Home</p></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/user/Desktop/hello%20world/My%20project/project3.html"><p class="nav">projects & task</p></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/user/Desktop/hello%20world/My%20project/project4.html"><p class="nav">contact</p></a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="grid-container">
+        <div class="h1">
+            <h1 class="texth1">Hi Im Jameel,<h1 class="texth1">Web Developer</h1>
+            </h1>
+            <p class="text1">Front End Developer / Technical Support</p>
+            <br><br>
+            <img src="img 1.png" width="420px" height="400px">
+        </div>
+        <div class="h1">
+            <div class="container">
+                <img src="jameel20.JPG" width="500" height="630px" class="img1">
+                <div class="overlay">
+                    <div class="text"><img src="li.png" width="200px" height="200px"><br>
+                        <p>“All life is an experiment.
+                        <p>The more experiments
+                        <p> you make the better”</p>
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <br><br> -->
+    <div class="about-me">
+        <div class="h2">
+            <h3 class="about-me-h3">About Me</h3>
+            <div class="border-me-text">
+                <p class="adout-me-text">My name is Jameel Sameeh Suleiman Al-Gharabat, I was born on February 14, 2002,
+                    in Amman and I am 20 years old. I live in Amman / Giza.
+                <p class="adout-me-text"><br>He holds a high school diploma from Giza School, Scientific Branch, in
+                    2019/2020.
+                    Trainee at coding academy by orange
+                    Student at LTUC university</p>
+            </div>
+        </div>
+        <div class="h2">
+            <img src="about me.png" width="450" height="400px" >
+        </div>
+        <div class="item3">
+            <p><b><img src="stars.png" width="80px" height="80px">“Life is like riding a bicycle. To keep your balance,
+                    you must keep moving"<img src="stars.png" width="80px" height="80px"></b></p>
+        </div>
+    </div>
+    <div class="qualification-grid">
+        <div class="qualification-size">
+            <h2 class="qualification-size-text">education </h2>
+            <div class="border-text-qualification">
+                <img src="education.png" width="250px" height="250px">
+                <p class="adout-me-text">I obtained a high school certificate from Giza School, the Scientific Branch for the year 2019/2020.
+                    Intern at Orange Programming Academy
+                    Study Information Technology/Technical Support at LTUC</p>
+            </div>
+        </div>
+
+        <div class="qualification-size">
+            <h2 class="qualification-size-text"> experience </h2>
+            <div class="border-text-qualification">
+                <img src="experience.png" width="250px" height="250px">
+                <p class="adout-me-text">I have very good experience in the following programming languages: HTML, CSS, bootstrap And i have excellent experience in: Powerpoint, Word, Excel, Zoom meeting </p>
+            </div>
+        </div>
+
+        <div class="qualification-size">
+            <h2 class="qualification-size-text">skills</h2>
+            <div class="border-text-qualification">
+                <img src="skills.png" width="250px" height="250px">
+                <p class="adout-me-text">communication skills, time management, solving problems, self-reliance, Teamwork skills, Research skills. </p>
+                    
+                 
+                    
+                   
+                   
+                   
+            </div>
+        </div>
+    </div>
+
+    <div class="end-page-grid">
+
+        <div>
+            <a href="file:///C:/Users/user/Desktop/hello%20world/My%20project/project2.html#"> <p class="nav2">Home</p></a>
+        </div>
+
+        <div>
+            <p class="nav2">Jameel-Algharabat</p>
+        </div>
+
+        <div>
+            <a href="https://web.facebook.com/jameel.sameeh.79"><img src="facebook-new.png" width="50px"
+                    height="50px"></a>
+            <a href="https://www.linkedin.com/in/jameel-al-gharabat-469367244/"><img src="linkedin-circled--v1.png"
+                    width="50px" height="50px"></a>
+            <a href="https://github.com/Jameel-Algharabat"><img src="github.png" width="55px" height="55px"></a>
+        </div>
+
+    </div>
+</body>
